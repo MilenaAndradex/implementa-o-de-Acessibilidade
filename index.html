@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo – Milena Andrade</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #eef2f7;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #1c232e, #03484c);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .foto-perfil {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin: 8px 0 0;
+      font-size: 1.1em;
+    }
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .social-links a {
+      display: inline-block;
+      background: #fff;
+      color: #03484c;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .social-links a:hover {
+      background: #03484c;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      border-left: 6px solid #03484c;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      color: #1c232e;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 15px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    .exp-title {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.05em;
+      color: #03484c;
+    }
+    .exp-details {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95em;
+      line-height: 1.5em;
+      color: #555;
+    }
+    .skills-bar {
+      background: #d9e6f2;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 8px 0;
+    }
+    .skills-bar span {
+      display: block;
+      height: 20px;
+      background: linear-gradient(90deg, #4caf50, #03484c);
+      width: 0;
+      color: #fff;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: right;
+      padding-right: 8px;
+      border-radius: 8px;
+      transition: width 1.5s ease-in-out;
+    }
+    #search {
+      margin-bottom: 15px;
+      padding: 10px;
+      width: 100%;
+      max-width: 350px;
+      border: 1px solid #bbb;
+      border-radius: 10px;
+      font-size: 1em;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    #search:focus {
+      border-color: #03484c;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid #007bff;
+      outline-offset: 2px;
+      box-shadow: 0 0 10px rgba(0,123,255,0.7);
+      border-radius: 4px;
+    }
+
+    .audio-button {
+      background-color: #03484c;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 15px;
+      font-size: 0.9em;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+    .audio-button:hover {
+      background-color: #1c232e;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="abc.jpeg" alt="Foto" class="foto-perfil">
+    <h1>Milena Andrade</h1>
+    <p>Email: m.andradex01@gmail.com | Tel: (86) 94002-8922 | Parnaíba - PI</p>
+
+    <div class="social-links">
+      <a href="https://github.com/MilenaAndradex" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/milena-andrade-04b10b267/" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Resumo</h2>
+      <div class="card">
+        <p id="resumo-text">Estudante de Ciência da Computação. Possuo experiência prática no ensino de Lógica de Programação e desenvolvimento web com Python/Django, adquirida através da organização de cursos de extensão e atuação como treinadora voluntária em eventos como o Django Girls. Participante da comunidade Pyladies.</p>
+        
+        <button id="speakResumoBtn" class="audio-button" aria-label="Ouvir o resumo">
+          <i class="fas fa-volume-up"></i> Ouvir
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Apresentação em Vídeo</h2>
+      <div class="card">
+        <video controls style="width: 100%; border-radius: 8px;" title="Vídeo de Apresentação de Gigi">
+          <source src="202510212129.mp4" type="video/mp4">
+          <track kind="captions" srclang="pt-br" src="legendas.vtt" label="Português" default>
+          <track kind="descriptions" srclang="pt-br" src="audiodescricao.vtt" label="Audiodescrição">
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <h3>Transcrição do Vídeo</h3>
+        <p>
+          (Olá, Meu nome é Milena, sou estudante de Ciência da Computação. Possuo experiência prática no ensino de Lógica de Programação e desenvolvimento web com Python/Django, adquirida através da organização de cursos de extensão e atuação como treinadora voluntária em eventos.)
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experiência</h2>
+      <label for="search" class="sr-only">Pesquisar experiência</label>
+      <input type="text" id="search" placeholder="Pesquisar experiência...">
+      <div id="experiencias"></div>
+    </section>
+
+    <section>
+      <h2>Formação</h2>
+      <div class="card"> Bacharelado em Ciência da Computação – Universidade Estadual do Piauí (2022 - Atual) </div>
+      <div class="card"> Técnico em Informática – Ceti Liceu Parnaibano (2018 - 2020) </div>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <div class="skills-bar"><span data-skill="90">Python</span></div>
+      <div class="skills-bar"><span data-skill="85">HTML</span></div>
+      <div class="skills-bar"><span data-skill="80">CSS</span></div>
+      <div class="skills-bar"><span data-skill="75">JavaScript</span></div>
+    </section>
+  </main>
+
+  <script>
+    const experiencias = [
+      {
+        cargo: "Treinadora",
+        instituicao: "Django Girls",
+        periodo: "2022 e 2024",
+        detalhes: "Atuei como treinadora voluntária nos workshops Django Girls, auxiliando mulheres iniciantes a construir suas primeiras aplicações web utilizando HTML,CSS, Python e Django."
+      },
+      {
+        cargo: "Organizadora e Instrutora Curso Lógica com Python",
+        instituicao: "U",
+        periodo: "2023",
+        detalhes: "Participei ativamente da concepção, organização e execução de um curso de extensão voltado para o ensino introdutório de lógica de programação com a linguagem Python para mulheres da comunidade PyLadies Parnaíba. Realizado na Universidade Estadual do Piauí"
+      }
+    ];
+
+    const container = document.getElementById("experiencias");
+
+    function renderExperiencias(filtro = "") {
+      container.innerHTML = "";
+      experiencias
+        .filter(exp => exp.cargo.toLowerCase().includes(filtro.toLowerCase()) || exp.instituicao.toLowerCase().includes(filtro.toLowerCase()))
+        .forEach((exp, index) => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          const titleButton = document.createElement("button");
+          titleButton.className = "exp-title";
+          titleButton.textContent = `${exp.cargo} – ${exp.instituicao} (${exp.periodo})`;
+          titleButton.setAttribute("aria-expanded", "false");
+          titleButton.setAttribute("aria-controls", `details-${index}`);
+
+          const details = document.createElement("div");
+          details.className = "exp-details";
+          details.textContent = exp.detalhes;
+          details.id = `details-${index}`; 
+
+          titleButton.addEventListener("click", () => {
+            const isExpanded = titleButton.getAttribute("aria-expanded") === "true";
+            details.style.display = isExpanded ? "none" : "block";
+            titleButton.setAttribute("aria-expanded", !isExpanded);
+          });
+
+          card.appendChild(titleButton);
+          card.appendChild(details);
+          container.appendChild(card);
+        });
+    }
+
+    renderExperiencias();
+
+    document.getElementById("search").addEventListener("input", e => {
+      renderExperiencias(e.target.value);
+    });
+
+    const skillBars = document.querySelectorAll(".skills-bar span");
+    function animateBars() {
+      skillBars.forEach(bar => {
+        const value = bar.getAttribute("data-skill");
+        bar.style.width = value + "%";
+        bar.setAttribute("aria-label", `Nível de habilidade em ${bar.textContent}: ${value}%`);
+      });
+    }
+    window.addEventListener("load", animateBars);
+
+
+    if ('speechSynthesis' in window) {
+      const speakButton = document.getElementById('speakResumoBtn');
+      const textToSpeak = document.getElementById('resumo-text').textContent;
+      const speakIcon = speakButton.querySelector('i');
+
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      utterance.lang = 'pt-BR'; 
+
+      speakButton.addEventListener('click', () => {
+        if (window.speechSynthesis.speaking) {
+          window.speechSynthesis.cancel();
+        } else {
+          window.speechSynthesis.speak(utterance);
+        }
+      });
+
+      utterance.onstart = () => {
+        speakIcon.classList.remove('fa-volume-up');
+        speakIcon.classList.add('fa-pause');
+        speakButton.setAttribute('aria-label', 'Pausar a narração');
+      };
+
+      utterance.onend = () => {
+        speakIcon.classList.remove('fa-pause');
+        speakIcon.classList.add('fa-volume-up');
+        speakButton.setAttribute('aria-label', 'Ouvir o resumo');
+      };
+      
+      utterance.onerror = () => {
+          utterance.onend();
+      }
+
+    } else {
+      const speakButton = document.getElementById('speakResumoBtn');
+      if(speakButton) speakButton.style.display = 'none';
+      console.log("Seu navegador não suporta a Web Speech API.");
+    }
+    
+  </script>
+</body>
+</html>
